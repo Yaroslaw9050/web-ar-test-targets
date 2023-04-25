@@ -46,31 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       video.currentTime = 6;
     });
     
-    const anchor = mindarThree.addAnchor(1);
-    anchor.group.add(plane);
-
-    anchor.onTargetFound = () => {
-      video.play();
-    }
-    anchor.onTargetLost = () => {
-      video.pause();
-    }
-    video.addEventListener( 'play', () => {
-      video.currentTime = 6;
-    });
-    
-    const anchor = mindarThree.addAnchor(2);
-    anchor.group.add(plane);
-
-    anchor.onTargetFound = () => {
-      video.play();
-    }
-    anchor.onTargetLost = () => {
-      video.pause();
-    }
-    video.addEventListener( 'play', () => {
-      video.currentTime = 6;
-    });
     
 //start the experience
     await mindarThree.start();
