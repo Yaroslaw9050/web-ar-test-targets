@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
 
-    const video0 = await loadVideo("./assets/videos/video1.mp4");
-    const texture0 = new THREE.VideoTexture(video);
-    const geometry0 = new THREE.PlaneGeometry(1, 1920/1080);
-    const material0 = new THREE.MeshBasicMaterial({map: texture});
-    const plane0 = new THREE.Mesh(geometry, material);
+    const video = await loadVideo("./assets/videos/video1.mp4");
+    const texture = new THREE.VideoTexture(video);
+    const geometry = new THREE.PlaneGeometry(1, 1920/1080);
+    const material = new THREE.MeshBasicMaterial({map: texture});
+    const plane = new THREE.Mesh(geometry, material);
     
     const video1 = await loadVideo("./assets/videos/video2.mp4");
     const texture1 = new THREE.VideoTexture(video);
