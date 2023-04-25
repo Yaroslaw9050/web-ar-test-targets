@@ -22,62 +22,51 @@ document.addEventListener('DOMContentLoaded', () => {
     bear.scene.scale.set(0.1, 0.1, 0.1);
     bear.scene.position.set(0, -0.4, 0);
 
-    const video = await loadVideo("./assets/videos/sintel/sintel.mp4");
-    const texture = new THREE.VideoTexture(video);
-    const geometry = new THREE.PlaneGeometry(1, 204/480);
-    const material = new THREE.MeshBasicMaterial({map: texture});
-    const plane = new THREE.Mesh(geometry, material);
+    const video0 = await loadVideo("./assets/videos/video 1.mp4");
+    const texture0 = new THREE.VideoTexture(video);
+    const geometry0 = new THREE.PlaneGeometry(1, 1920/1080);
+    const material0 = new THREE.MeshBasicMaterial({map: texture});
+    const plane0 = new THREE.Mesh(geometry, material);
+    
+    const video1 = await loadVideo("./assets/videos/video 2.mp4");
+    const texture1 = new THREE.VideoTexture(video);
+    const geometry1 = new THREE.PlaneGeometry(1, 1920/1080);
+    const material1 = new THREE.MeshBasicMaterial({map: texture});
+    const plane1 = new THREE.Mesh(geometry, material);
+    
+    const video2 = await loadVideo("./assets/videos/video 3.mp4");
+    const texture2 = new THREE.VideoTexture(video);
+    const geometry2 = new THREE.PlaneGeometry(1, 1920/1080);
+    const material2 = new THREE.MeshBasicMaterial({map: texture});
+    const plane2 = new THREE.Mesh(geometry, material);
 
-    //first digital content (3D model with audio)
-    //comment
+    // digital content (video)
+    const anchor = mindarThree.addAnchor(0);
+    anchor.group.add(plane);
 
-    const raccoonAnchor = mindarThree.addAnchor(0);
-    raccoonAnchor.group.add(raccoon.scene);
-
-    const audioClip1 = await loadAudio('./assets/sounds/musicband-background.mp3');
-
-    const listener1 = new THREE.AudioListener();
-    camera.add(listener1);
-
-    const audio1 = new THREE.PositionalAudio(listener1);
-    raccoonAnchor.group.add(audio1);
-
-    audio1.setBuffer(audioClip1);
-    audio1.setRefDistance(100);
-    audio1.setLoop(true);
-
-    raccoonAnchor.onTargetFound = () => {
-      audio1.play();
+    anchor.onTargetFound = () => {
+      video.play();
     }
-    raccoonAnchor.onTargetLost = () => {
-      audio1.pause();
+    anchor.onTargetLost = () => {
+      video.pause();
     }
+    video.addEventListener( 'play', () => {
+      video.currentTime = 6;
+    });
+    
+    const anchor = mindarThree.addAnchor(1);
+    anchor.group.add(plane);
 
-    //second digital content (3D model with audio)
-
-    const bearAnchor = mindarThree.addAnchor(1);
-    bearAnchor.group.add(bear.scene);
-
-    const audioClip2 = await loadAudio('./assets/sounds/musicband-background.mp3');
-
-    const listener2 = new THREE.AudioListener();
-    camera.add(listener2);
-
-    const audio2 = new THREE.PositionalAudio(listener2);
-    bearAnchor.group.add(audio2);
-
-    audio2.setBuffer(audioClip2);
-    audio2.setRefDistance(100);
-    audio2.setLoop(true);
-
-    bearAnchor.onTargetFound = () => {
-      audio2.play();
+    anchor.onTargetFound = () => {
+      video.play();
     }
-    bearAnchor.onTargetLost = () => {
-      audio2.pause();
+    anchor.onTargetLost = () => {
+      video.pause();
     }
-
-    // third digital content (video)
+    video.addEventListener( 'play', () => {
+      video.currentTime = 6;
+    });
+    
     const anchor = mindarThree.addAnchor(2);
     anchor.group.add(plane);
 
@@ -90,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video.addEventListener( 'play', () => {
       video.currentTime = 6;
     });
+    
 //start the experience
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
