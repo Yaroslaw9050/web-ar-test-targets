@@ -77,6 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
     video3.currentTime = 6;
   });
     
+     //image 1
+  const anchor4 = mindarThree.addAnchor(3);
+  const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
+  const geometry4 = new THREE.PlaneGeometry(1, 0.55);
+  const material4 = new THREE.MeshBasicMaterial({map: texture4});
+  const plane4 = new THREE.Mesh( geometry4, material4);
+
+  //image 2
+  const anchor5 = mindarThree.addAnchor(4);
+  const texture5 = new THREE.TextureLoader().load("./assets/img2.jpg");
+  const geometry5 = new THREE.PlaneGeometry(1, 0.55);
+  const material5 = new THREE.MeshBasicMaterial({map: texture5});
+  const plane5 = new THREE.Mesh( geometry5, material5);
+    
 //start the experience
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
