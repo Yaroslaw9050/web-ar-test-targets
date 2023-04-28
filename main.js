@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
      //image 1
   const anchor4 = mindarThree.addAnchor(3);
   const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
-  const geometry4 = new THREE.PlaneGeometry(1, 0.55);
+  const geometry4 = new THREE.PlaneGeometry(1920, 1080);
   const material4 = new THREE.MeshBasicMaterial({map: texture4});
   const plane4 = new THREE.Mesh( geometry4, material4);
 
