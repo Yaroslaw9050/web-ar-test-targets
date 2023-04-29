@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const {renderer, scene, camera} = mindarThree;
 
-//light is needed when we use 3D objects
-    const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
-    scene.add(light);
+//light is needed when we use 3D objects (δεν χρειάζεται το φως)
+    //const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
+    //scene.add(light);
 
      // load and create the first video plane
   const video1 = await loadVideo("./assets/videos/Video1.mp4");
@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const geometry4 = new THREE.PlaneGeometry(1, 0.55);
   const material4 = new THREE.MeshBasicMaterial({map: texture4});
   const plane4 = new THREE.Mesh( geometry4, material4);
+    
+  anchor4.group.add(plane4);
 
   //image 2
   const anchor5 = mindarThree.addAnchor(4);
@@ -90,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const geometry5 = new THREE.PlaneGeometry(1, 0.55);
   const material5 = new THREE.MeshBasicMaterial({map: texture5});
   const plane5 = new THREE.Mesh( geometry5, material5);
+    
+  anchor5.group.add(plane5);
     
 //start the experience
     await mindarThree.start();
