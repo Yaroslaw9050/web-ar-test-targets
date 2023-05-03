@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video1.pause();
   }
   video1.addEventListener( 'play', () => {
-    video1.currentTime = 6;
+    video1.currentTime = 14;
   });
 
   // add the second video plane to an anchor
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video2.pause();
   }
   video2.addEventListener( 'play', () => {
-    video2.currentTime = 6;
+    video2.currentTime = 5;
   });
 
   // add the third video plane to an anchor
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video3.pause();
   }
   video3.addEventListener( 'play', () => {
-    video3.currentTime = 6;
+    video3.currentTime = 9;
   });
     
      //image 1
