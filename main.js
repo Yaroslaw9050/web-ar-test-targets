@@ -22,18 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const plane1 = new THREE.Mesh(geometry1, material1);
 
   // load and create the second video plane
-  const video2 = await loadVideo("./assets/videos/Video2.mp4");
-  const texture2 = new THREE.VideoTexture(video2);
-  const geometry2 = new THREE.PlaneGeometry(1, 720/1280);
-  const material2 = new THREE.MeshBasicMaterial({map: texture2});
-  const plane2 = new THREE.Mesh(geometry2, material2);
+  //const video2 = await loadVideo("./assets/videos/Video2.mp4");
+  //const texture2 = new THREE.VideoTexture(video2);
+  //const geometry2 = new THREE.PlaneGeometry(1, 720/1280);
+  //const material2 = new THREE.MeshBasicMaterial({map: texture2});
+  //const plane2 = new THREE.Mesh(geometry2, material2);
 
   // load and create the third video plane
-  const video3 = await loadVideo("./assets/videos/Video3.mp4");
-  const texture3 = new THREE.VideoTexture(video3);
-  const geometry3 = new THREE.PlaneGeometry(1, 720/1280);
-  const material3 = new THREE.MeshBasicMaterial({map: texture3});
-  const plane3 = new THREE.Mesh(geometry3, material3);
+  //const video3 = await loadVideo("./assets/videos/Video3.mp4");
+  //const texture3 = new THREE.VideoTexture(video3);
+  //const geometry3 = new THREE.PlaneGeometry(1, 720/1280);
+  //const material3 = new THREE.MeshBasicMaterial({map: texture3});
+  //const plane3 = new THREE.Mesh(geometry3, material3);
 
   // add the first video plane to an anchor
   const anchor1 = mindarThree.addAnchor(0);
@@ -50,18 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // add the second video plane to an anchor
-  const anchor2 = mindarThree.addAnchor(1);
-  anchor2.group.add(plane2);
+  //const anchor2 = mindarThree.addAnchor(1);
+  //anchor2.group.add(plane2);
 
-  anchor2.onTargetFound = () => {
-    video2.play();
-  }
-  anchor2.onTargetLost = () => {
-    video2.pause();
-  }
-  video2.addEventListener( 'play', () => {
-    video2.currentTime = 5;
-  });
+  //anchor2.onTargetFound = () => {
+  //  video2.play();
+  //}
+  //anchor2.onTargetLost = () => {
+  //  video2.pause();
+  //}
+  //video2.addEventListener( 'play', () => {
+  //  video2.currentTime = 5;
+  //});
 
   // add the third video plane to an anchor
   const anchor3 = mindarThree.addAnchor(2);
