@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video1.pause();
   }
   video1.addEventListener( 'play', () => {
-    video1.currentTime = 14;
+    video1.currentTime = 5;
   });
 
   // add the second video plane to an anchor
