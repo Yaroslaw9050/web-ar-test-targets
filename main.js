@@ -22,18 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const plane1 = new THREE.Mesh(geometry1, material1);
 
   // load and create the second video plane
-  //const video2 = await loadVideo("./assets/videos/Video2.mp4");
-  //const texture2 = new THREE.VideoTexture(video2);
-  //const geometry2 = new THREE.PlaneGeometry(1, 720/1280);
-  //const material2 = new THREE.MeshBasicMaterial({map: texture2});
-  //const plane2 = new THREE.Mesh(geometry2, material2);
+  const video2 = await loadVideo("./assets/videos/Video2.mp4");
+  const texture2 = new THREE.VideoTexture(video2);
+  const geometry2 = new THREE.PlaneGeometry(1, 720/1280);
+  const material2 = new THREE.MeshBasicMaterial({map: texture2});
+  const plane2 = new THREE.Mesh(geometry2, material2);
 
   // load and create the third video plane
-  //const video3 = await loadVideo("./assets/videos/Video3.mp4");
-  //const texture3 = new THREE.VideoTexture(video3);
-  //const geometry3 = new THREE.PlaneGeometry(1, 720/1280);
-  //const material3 = new THREE.MeshBasicMaterial({map: texture3});
-  //const plane3 = new THREE.Mesh(geometry3, material3);
+  const video3 = await loadVideo("./assets/videos/Video3.mp4");
+  const texture3 = new THREE.VideoTexture(video3);
+  const geometry3 = new THREE.PlaneGeometry(1, 720/1280);
+  const material3 = new THREE.MeshBasicMaterial({map: texture3});
+  const plane3 = new THREE.Mesh(geometry3, material3);
 
   // add the first video plane to an anchor
   const anchor1 = mindarThree.addAnchor(0);
@@ -50,41 +50,41 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // add the second video plane to an anchor
-  //const anchor2 = mindarThree.addAnchor(1);
-  //anchor2.group.add(plane2);
+  const anchor2 = mindarThree.addAnchor(1);
+  anchor2.group.add(plane2);
 
-  //anchor2.onTargetFound = () => {
-  //  video2.play();
-  //}
-  //anchor2.onTargetLost = () => {
-  //  video2.pause();
-  //}
-  //video2.addEventListener( 'play', () => {
-  //  video2.currentTime = 5;
-  //});
+  anchor2.onTargetFound = () => {
+    video2.play();
+  }
+  anchor2.onTargetLost = () => {
+    video2.pause();
+  }
+  video2.addEventListener( 'play', () => {
+    video2.currentTime = 5;
+  });
 
-  // add the third video plane to an anchor
-  //const anchor3 = mindarThree.addAnchor(2);
-  //anchor3.group.add(plane3);
+   add the third video plane to an anchor
+  const anchor3 = mindarThree.addAnchor(2);
+  anchor3.group.add(plane3);
 
-  //anchor3.onTargetFound = () => {
-  //  video3.play();
-  //}
-  //anchor3.onTargetLost = () => {
-  //  video3.pause();
-  //}
-  //video3.addEventListener( 'play', () => {
-  //  video3.currentTime = 9;
-  //});
+  anchor3.onTargetFound = () => {
+    video3.play();
+  }
+  anchor3.onTargetLost = () => {
+    video3.pause();
+  }
+  video3.addEventListener( 'play', () => {
+    video3.currentTime = 9;
+  });
     
      //image 1
-  //const anchor4 = mindarThree.addAnchor(3);
-  //const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
-  //const geometry4 = new THREE.PlaneGeometry(1, 0.55);
-  //const material4 = new THREE.MeshBasicMaterial({map: texture4});
-  //const plane4 = new THREE.Mesh( geometry4, material4);
+  const anchor4 = mindarThree.addAnchor(3);
+  const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
+  const geometry4 = new THREE.PlaneGeometry(1, 0.55);
+  const material4 = new THREE.MeshBasicMaterial({map: texture4});
+  const plane4 = new THREE.Mesh( geometry4, material4);
     
-  //anchor4.group.add(plane4);
+  anchor4.group.add(plane4);
 
     
 //start the experience
