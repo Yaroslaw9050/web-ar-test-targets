@@ -86,14 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
   anchor4.group.add(plane4);
 
-  //image 2
-  const anchor5 = mindarThree.addAnchor(4);
-  const texture5 = new THREE.TextureLoader().load("./assets/img2.jpg");
-  const geometry5 = new THREE.PlaneGeometry(1, 0.55);
-  const material5 = new THREE.MeshBasicMaterial({map: texture5});
-  const plane5 = new THREE.Mesh( geometry5, material5);
-    
-  anchor5.group.add(plane5);
     
 //start the experience
     await mindarThree.start();
