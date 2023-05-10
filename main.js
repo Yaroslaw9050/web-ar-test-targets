@@ -17,21 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
      // load and create the first video plane
   const video1 = await loadVideo("./assets/videos/Video1.mp4");
   const texture1 = new THREE.VideoTexture(video1);
-  const geometry1 = new THREE.PlaneGeometry(1, 720/576);
+  const geometry1 = new THREE.PlaneGeometry(1, 1280/720);
   const material1 = new THREE.MeshBasicMaterial({map: texture1});
   const plane1 = new THREE.Mesh(geometry1, material1);
 
   // load and create the second video plane
   const video2 = await loadVideo("./assets/videos/Video2.mp4");
   const texture2 = new THREE.VideoTexture(video2);
-  const geometry2 = new THREE.PlaneGeometry(1, 720/576);
+  const geometry2 = new THREE.PlaneGeometry(1, 1280/720);
   const material2 = new THREE.MeshBasicMaterial({map: texture2});
   const plane2 = new THREE.Mesh(geometry2, material2);
 
   // load and create the third video plane
   const video3 = await loadVideo("./assets/videos/Video3.mp4");
   const texture3 = new THREE.VideoTexture(video3);
-  const geometry3 = new THREE.PlaneGeometry(1, 720/576);
+  const geometry3 = new THREE.PlaneGeometry(1, 1280/720);
   const material3 = new THREE.MeshBasicMaterial({map: texture3});
   const plane3 = new THREE.Mesh(geometry3, material3);
 
