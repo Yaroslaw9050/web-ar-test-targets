@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video2.currentTime = 5;
   });
 
-   add the third video plane to an anchor
+  // add the third video plane to an anchor
   const anchor3 = mindarThree.addAnchor(2);
   anchor3.group.add(plane3);
 
