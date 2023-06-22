@@ -68,15 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // const anchor3 = mindarThree.addAnchor(2);
   // anchor3.group.add(plane3);
 
-  // anchor3.onTargetFound = () => {
-  //   video3.play();
-  // }
-  // anchor3.onTargetLost = () => {
-  //   video3.pause();
-  // }
-  // video3.addEventListener( 'play', () => {
-  //   video3.currentTime = 9;
-  // });
+  anchor3.onTargetFound = () => {
+    video3.play();
+  }
+  anchor3.onTargetLost = () => {
+    video3.pause();
+  }
+  video3.addEventListener( 'play', () => {
+    video3.currentTime = 9;
+  });
     
   //    //image 1
   // const anchor4 = mindarThree.addAnchor(3);
