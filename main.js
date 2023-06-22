@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   anchor1.group.add(plane1);
 
   anchor1.onTargetFound = () => {
+    console.log('Start 1 video');
     video1.play();
   }
   anchor1.onTargetLost = () => {
