@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const {renderer, scene, camera} = mindarThree;
 
-    console.log('Document loaded');
 //light is needed when we use 3D objects (δεν χρειάζεται το φως)
     //const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     //scene.add(light);
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
   anchor1.group.add(plane1);
 
   anchor1.onTargetFound = () => {
-    console.log('Video 1 started');
     video1.play();
   }
   anchor1.onTargetLost = () => {
@@ -53,15 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // add the second video plane to an anchor
   // const anchor2 = mindarThree.addAnchor(1);
-  // anchor2.group.add(plane2);
+  anchor2.group.add(plane2);
 
-  // anchor2.onTargetFound = () => {
-  //   console.log('Video 2 started');
-  //   video2.play();
-  // }
-  // anchor2.onTargetLost = () => {
-  //   video2.pause();
-  // }
+  anchor2.onTargetFound = () => {
+    console.log('Video 2 started');
+    video2.play();
+  }
+  anchor2.onTargetLost = () => {
+    video2.pause();
+  }
   // video2.addEventListener( 'play', () => {
   //   video2.currentTime = 5;
   // });
