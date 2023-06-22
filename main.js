@@ -50,30 +50,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   // add the second video plane to an anchor
-  const anchor2 = mindarThree.addAnchor(1);
-  anchor2.group.add(plane2);
+  // const anchor2 = mindarThree.addAnchor(1);
+  // anchor2.group.add(plane2);
 
-  anchor2.onTargetFound = () => {
-    console.log('Video 2 started');
-    video2.play();
-  }
-  anchor2.onTargetLost = () => {
-    video2.pause();
-  }
+  // anchor2.onTargetFound = () => {
+  //   console.log('Video 2 started');
+  //   video2.play();
+  // }
+  // anchor2.onTargetLost = () => {
+  //   video2.pause();
+  // }
   // video2.addEventListener( 'play', () => {
   //   video2.currentTime = 5;
   // });
 
   // add the third video plane to an anchor
-  const anchor3 = mindarThree.addAnchor(2);
-  anchor3.group.add(plane3);
+  // const anchor3 = mindarThree.addAnchor(2);
+  // anchor3.group.add(plane3);
 
-  anchor3.onTargetFound = () => {
-    video3.play();
-  }
-  anchor3.onTargetLost = () => {
-    video3.pause();
-  }
+  // anchor3.onTargetFound = () => {
+  //   video3.play();
+  // }
+  // anchor3.onTargetLost = () => {
+  //   video3.pause();
+  // }
   // video3.addEventListener( 'play', () => {
   //   video3.currentTime = 9;
   // });
@@ -85,5 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
       renderer.render(scene, camera);
     });
   }
+
   start();
 });
