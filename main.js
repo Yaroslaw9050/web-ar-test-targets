@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   // add the third video plane to an anchor
-  // const anchor3 = mindarThree.addAnchor(2);
-  // anchor3.group.add(plane3);
+  const anchor3 = mindarThree.addAnchor(2);
+  anchor3.group.add(plane3);
 
   anchor3.onTargetFound = () => {
     video3.play();
@@ -78,15 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     video3.currentTime = 9;
   });
     
-  //    //image 1
-  // const anchor4 = mindarThree.addAnchor(3);
-  // const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
-  // const geometry4 = new THREE.PlaneGeometry(1, 0.55);
-  // const material4 = new THREE.MeshBasicMaterial({map: texture4});
-  // const plane4 = new THREE.Mesh( geometry4, material4);
-    
-  // anchor4.group.add(plane4);
-
     
 //start the experience
     await mindarThree.start();
@@ -94,10 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
       renderer.render(scene, camera);
     });
   }
-  //to πλήκτρο start δουλεύει για μια φορά μόνο
-  //const startButton = document.createElement("button");
-  //startButton.textContent = "Start";
-  //startButton.addEventListener("click", start);
-  //document.body.appendChild(startButton);
   start();
 });
