@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
   anchor1.onTargetLost = () => {
     video1.pause();
   }
-  // video1.addEventListener( 'play', () => {
-  //   video1.currentTime = 18;
-  // });
+  video1.addEventListener( 'play', () => {
+    video1.currentTime = 18;
+  });
 
   // add the second video plane to an anchor
-  // const anchor2 = mindarThree.addAnchor(1);
+  const anchor2 = mindarThree.addAnchor(1);
   anchor2.group.add(plane2);
 
   anchor2.onTargetFound = () => {
@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
   anchor2.onTargetLost = () => {
     video2.pause();
   }
-  // video2.addEventListener( 'play', () => {
-  //   video2.currentTime = 5;
-  // });
+  video2.addEventListener( 'play', () => {
+    video2.currentTime = 5;
+  });
 
   // add the third video plane to an anchor
   const anchor3 = mindarThree.addAnchor(2);
@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
   anchor3.onTargetLost = () => {
     video3.pause();
   }
-  // video3.addEventListener( 'play', () => {
-  //   video3.currentTime = 9;
-  // });
+  video3.addEventListener( 'play', () => {
+    video3.currentTime = 9;
+  });
     
     
 //start the experience
