@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
   anchor3.onTargetLost = () => {
     video3.pause();
   }
-  video3.addEventListener( 'play', () => {
-    video3.currentTime = 9;
-  });
+  // video3.addEventListener( 'play', () => {
+  //   video3.currentTime = 9;
+  // });
     
     
 //start the experience
