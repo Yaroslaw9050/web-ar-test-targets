@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const {renderer, scene, camera} = mindarThree;
 
+    console.log('Document loaded');
 //light is needed when we use 3D objects (δεν χρειάζεται το φως)
     //const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     //scene.add(light);
@@ -51,42 +52,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   // add the second video plane to an anchor
-  const anchor2 = mindarThree.addAnchor(1);
-  anchor2.group.add(plane2);
+  // const anchor2 = mindarThree.addAnchor(1);
+  // anchor2.group.add(plane2);
 
-  anchor2.onTargetFound = () => {
-    console.log('Video 2 started');
-    video2.play();
-  }
-  anchor2.onTargetLost = () => {
-    video2.pause();
-  }
+  // anchor2.onTargetFound = () => {
+  //   console.log('Video 2 started');
+  //   video2.play();
+  // }
+  // anchor2.onTargetLost = () => {
+  //   video2.pause();
+  // }
   // video2.addEventListener( 'play', () => {
   //   video2.currentTime = 5;
   // });
 
   // add the third video plane to an anchor
-  const anchor3 = mindarThree.addAnchor(2);
-  anchor3.group.add(plane3);
+  // const anchor3 = mindarThree.addAnchor(2);
+  // anchor3.group.add(plane3);
 
-  anchor3.onTargetFound = () => {
-    video3.play();
-  }
-  anchor3.onTargetLost = () => {
-    video3.pause();
-  }
+  // anchor3.onTargetFound = () => {
+  //   video3.play();
+  // }
+  // anchor3.onTargetLost = () => {
+  //   video3.pause();
+  // }
   // video3.addEventListener( 'play', () => {
   //   video3.currentTime = 9;
   // });
     
-     //image 1
-  const anchor4 = mindarThree.addAnchor(3);
-  const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
-  const geometry4 = new THREE.PlaneGeometry(1, 0.55);
-  const material4 = new THREE.MeshBasicMaterial({map: texture4});
-  const plane4 = new THREE.Mesh( geometry4, material4);
+  //    //image 1
+  // const anchor4 = mindarThree.addAnchor(3);
+  // const texture4 = new THREE.TextureLoader().load("./assets/img1.jpg");
+  // const geometry4 = new THREE.PlaneGeometry(1, 0.55);
+  // const material4 = new THREE.MeshBasicMaterial({map: texture4});
+  // const plane4 = new THREE.Mesh( geometry4, material4);
     
-  anchor4.group.add(plane4);
+  // anchor4.group.add(plane4);
 
     
 //start the experience
